@@ -1,25 +1,15 @@
-import { Link, Routes, Route} from "react-router-dom";
-import Blue from "./components/Blue/Blue";
-import Red from "./components/Red/Red";
-import Home from "./components/Home/Home";
+import Main from "./components/Main/Main";
+import NavBar from "./components/NavBar/NavBar";
+import Footer from "./components/Footer/Footer";
 
 function App() {
 
   return (
     <>
       <div id="container">
-        <div id="navbar">
-          <Link to="/">Home</Link>
-          <Link to="/blue">Blue</Link>
-          <Link to="/red">Red</Link>
-        </div>
-        <div id="main-section">
-          <Routes>
-          <Route path="/" element={<Home />} />
-            <Route path="/blue" element={<Blue />} />
-            <Route path="/red" element={<Red />} />
-          </Routes>
-        </div>
+        <NavBar />
+        <Main />
+        <Footer />
       </div>
     </>
   );
